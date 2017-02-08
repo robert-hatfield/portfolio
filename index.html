@@ -2,24 +2,28 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="/vendor/styles/normalize.css">
+    <link rel="stylesheet" href="/vendor/styles/skeleton.css">
     <link rel="stylesheet" href="style.css">
     <title></title>
   </head>
   <body>
-    <section>
-      <!-- TODO Splash image here, possibly a carousel of featured projects -->
-      <img src="https://placehold.it/800x400" alt="placeholder image">
-    </section>
-    <!-- TODO Superimpose this h1 & p over the splash image/carousel above -->
-    <h1>Robert Hatfield</h1>
-    <!-- TODO: Compose a single sentence describing myself -->
-    <p>This is a brief sentence that describes me.</p>
-    <nav>
+    <div class="container">
+      <section>
+        <!-- TODO Splash image here, possibly a carousel of featured projects -->
+        <img src="https://placehold.it/800x400" alt="placeholder image">
+      </section>
+      <!-- TODO Superimpose this h1 & p over the splash image/carousel above -->
+      <h1>Robert Hatfield</h1>
+      <!-- TODO: Compose a single sentence describing myself -->
+      <p>This is a brief sentence that describes me.</p>
+    </div>
+    <nav class="flex-container twelve-columns">
       <ul>
-        <li>Home</li>
-        <li>Portfolio</li>
-        <li>Blog</li>
-        <li>Contact</li>
+        <li class="space-around horizontal-list">Home</li>
+        <li class="space-around horizontal-list">Portfolio</li>
+        <li class="space-around horizontal-list">Blog</li>
+        <li class="space-around horizontal-list">Contact</li>
       </ul>
     </nav>
     <main>
