@@ -2,10 +2,55 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="/vendor/styles/normalize.css">
+    <link rel="stylesheet" href="/vendor/styles/skeleton.css">
     <link rel="stylesheet" href="style.css">
     <title></title>
   </head>
   <body>
+    <div class="container">
+      <section class="center">
+        <!-- TODO Splash image here, possibly a carousel of featured projects -->
+        <img src="https://placehold.it/800x400" alt="placeholder image" class="u-max-full-width">
+      </section>
+      <!-- TODO Superimpose this h1 & p over the splash image/carousel above -->
+      <h1>Robert Hatfield</h1>
+      <!-- TODO: Compose a single sentence describing myself -->
+      <p class="center">This is a brief sentence that describes me.</p>
+    </div>
+
+    <nav class="main-nav container">
+      <ul>
+        <li class="space-around horizontal-list">Home</li>
+        <li class="space-around horizontal-list">Portfolio</li>
+        <li class="space-around horizontal-list">Blog</li>
+        <li class="space-around horizontal-list">Contact</li>
+      </ul>
+    </nav>
+
+    <main class="container">
+      <section id="about">
+        <!-- TODO: Compose some more text about skills, areas of professional interest, etc. -->
+        <p>Here are some more details about me.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </section>
+      <section>
+        <h4>Skills</h4>
+        <ul>
+          <li>HTML / CSS</li>
+          <li>JavaScript</li>
+          <li>Git Version Control</li>
+        </ul>
+      </section>
+    </main>
+    <footer class="container main-nav">
+      <ul>
+        <!-- TODO: Add links to external sites, with logos -->
+        <li>GitHub</li>
+        <li>Twitter</li>
+        <li>LinkedIn</li>
+      </ul>
+    </footer>
     <script src="app.js" charset="utf-8"></script>
   </body>
 </html>
