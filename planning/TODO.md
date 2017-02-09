@@ -35,7 +35,7 @@ Let these user stories guide your development:
   - [ ] As a visitor, I want to see projects one per row on mobile, so that I can read the detail easily.
 
 ## Technical Requirements and Grading Rubric
-- [ ] Use good Object Oriented code: Create a constructor function for projects that contains properties appropriate for a portfolio project.
+- [x] Use good Object Oriented code: Create a constructor function for projects that contains properties appropriate for a portfolio project.
 - [ ] Leave as little in the `window` (global) namespace as possible: attach functions to objects, etc.
 - [x] Use strict mode in all .js files.
 - [ ] When you have finished your wireframes and data model, present them to the instructors for approval.
