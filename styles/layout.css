@@ -1,0 +1,19 @@
+.pull-left {
+  float: left;
+  width: 80%;
+}
+
+.pull-right {
+  float: right;
+  width: 15%;
+}
+
+.clear-floats {
+  clear: both;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear:both;
+}
