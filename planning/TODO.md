@@ -26,10 +26,10 @@ Let these user stories guide your development:
     - [ ] portfolio.html
     - [ ] blog.html
     - [ ] contact.html
-  - [ ] As a developer, I want to make a data model (object constructor) for my portfolio data, so I can store individual projects and render them to the DOM.
+  - [x] As a developer, I want to make a data model (object constructor) for my portfolio data, so I can store individual projects and render them to the DOM.
   - [X] As a visitor, I want the images to be responsive, so that content stays properly proportioned.
   - [X] As a visitor, I want the viewport properly sized, so that content fits all the size I have available.
-  - [ ] As a visitor, I want the primary nav to be responsive, so that I can get around using any device.
+  - [x] As a visitor, I want the primary nav to be responsive, so that I can get around using any device.
 
 ## User Stories: Stretch Goals (*not required*, adapt to fit your portfolio's design)
   - [ ] As a visitor, I want to see projects one per row on mobile, so that I can read the detail easily.
@@ -40,9 +40,9 @@ Let these user stories guide your development:
 - [x] Use strict mode in all .js files.
 - [ ] When you have finished your wireframes and data model, present them to the instructors for approval.
 - [x] Include a CSS reset
-- [ ] The nav menu should be hidden by default in mobile mode and should display when the user clicks the hamburger icon.
-- [ ] Be sure to use proper `viewport` settings.
-- [ ] Use mobile-first design principles when adding CSS.
-  - [ ] Make sure to scale images
+- [x] The nav menu should be hidden by default in mobile mode and should display when the user clicks the hamburger icon.
+- [x] Be sure to use proper `viewport` settings.
+- [x] Use mobile-first design principles when adding CSS.
+  - [x] Make sure to scale images
 - [ ] Add new styles in any media queries as needed to make the page look good on desktop screens.
 - [ ] For bonus points, include styles for tablet displays, as well as desktop and mobile.
