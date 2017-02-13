@@ -6,37 +6,44 @@
     <link rel="stylesheet" href="/vendor/styles/normalize.css">
     <link rel="stylesheet" href="/styles/icons.css">
     <link rel="stylesheet" href="/styles/base.css">
+    <link rel="stylesheet" href="/styles/layout.css">
     <link rel="stylesheet" href="/styles/modules.css">
     <title>Robert Hatfield</title>
   </head>
   <body>
-    <div class="container">
+    <div>
       <section class="center">
         <!-- TODO Splash image here, possibly a carousel of featured projects -->
         <img src="https://placehold.it/800x400" alt="placeholder image" class="u-max-full-width">
       </section>
       <!-- TODO Superimpose this h1 & p over the splash image/carousel above -->
-      <h1>Robert Hatfield</h1>
-      <!-- TODO: Compose a single sentence describing myself -->
-      <p class="center">This is a brief sentence that describes me.</p>
+      <section class="pull-left">
+        <h1>Robert Hatfield</h1>
+        <!-- TODO: Compose a single sentence describing myself -->
+        <p>This is a brief sentence that describes me.</p>
+      </section>
     </div>
 
-    <nav class="main-nav container">
+    <nav class="main-nav any-nav">
+      <h1 class="icon-menu-show"></h1>
+      <h1 class="icon-menu-hide"></h1>
       <ul>
-        <li class="space-around horizontal-list" class="icon-home"> Home</li>
-        <li class="space-around horizontal-list" class="icon-briefcase"> Portfolio</li>
-        <li class="space-around horizontal-list" class="icon-blog"> Blog</li>
-        <li class="space-around horizontal-list" class="icon-contact"> Contact</li>
+        <li><a href="#" class="icon-home"> Home</a></li>
+        <li><a href="#" class="icon-briefcase"> Portfolio</a></li>
+        <li><a href="#" class="icon-blog"> Blog</a></li>
+        <li><a href="#" class="icon-contact"> Contact</a></li>
       </ul>
     </nav>
 
-    <main class="container">
-      <section id="about">
+    <main class="clear-floats">
+      <hr />
+      <section id="about" class="main-content">
         <!-- TODO: Compose some more text about skills, areas of professional interest, etc. -->
         <p>Here are some more details about me.</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </section>
-      <section>
+      <section class="sidebar">
         <h4>Skills</h4>
         <ul>
           <li>HTML / CSS</li>
@@ -45,7 +52,7 @@
         </ul>
       </section>
     </main>
-    <footer class="container main-nav">
+    <footer class="any-nav clear-floats">
       <ul>
         <!-- DONE: Add links to external sites, with logos -->
         <li><a href="https://github.com/robert-hatfield" target="_blank" class="icon-github"> GitHub</a></li>
