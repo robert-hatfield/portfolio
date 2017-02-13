@@ -20,7 +20,7 @@ Adapt these stories as necessary to fit how you want to build your portfolio.
 ## User Stories: MVP
 Let these user stories guide your development:
   - [ ] As a developer, I need my site to use valid and semantic markup, so that employers will love me.
-  - [ ] As the creator, I need the page to link to my social and GitHub pages, so that visitors can follow me and I can build my audience.
+  - [x] As the creator, I need the page to link to my social and GitHub pages, so that visitors can follow me and I can build my audience.
   - [ ] As a developer, I want wireframes for each of the main views in my portfolio, so I will have a concrete idea of the design I am building.
     - [x] index.html _(Home)_
     - [ ] portfolio.html
@@ -43,5 +43,6 @@ Let these user stories guide your development:
 - [ ] The nav menu should be hidden by default in mobile mode and should display when the user clicks the hamburger icon.
 - [ ] Be sure to use proper `viewport` settings.
 - [ ] Use mobile-first design principles when adding CSS.
+  - [ ] Make sure to scale images
 - [ ] Add new styles in any media queries as needed to make the page look good on desktop screens.
 - [ ] For bonus points, include styles for tablet displays, as well as desktop and mobile.
