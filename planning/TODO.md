@@ -27,8 +27,8 @@ Let these user stories guide your development:
     - [ ] blog.html
     - [ ] contact.html
   - [ ] As a developer, I want to make a data model (object constructor) for my portfolio data, so I can store individual projects and render them to the DOM.
-  - [ ] As a visitor, I want the images to be responsive, so that content stays properly proportioned.
-  - [ ] As a visitor, I want the viewport properly sized, so that content fits all the size I have available.
+  - [X] As a visitor, I want the images to be responsive, so that content stays properly proportioned.
+  - [X] As a visitor, I want the viewport properly sized, so that content fits all the size I have available.
   - [ ] As a visitor, I want the primary nav to be responsive, so that I can get around using any device.
 
 ## User Stories: Stretch Goals (*not required*, adapt to fit your portfolio's design)
