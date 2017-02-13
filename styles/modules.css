@@ -9,6 +9,7 @@
 
 .main-nav ul {
   display: none;
+  clear: both;
 }
 
 .main-nav:hover ul {
@@ -23,10 +24,9 @@
   text-align: center;
 }
 
-@media only screen and (min-width:1025px){
+@media only screen and (min-width:600px){
   .any-nav ul {
     display: flex;
-    list-style: none;
     -webkit-justify-content: space-around;
     justify-content: space-around;
   }
@@ -39,7 +39,6 @@
 
   .any-nav:hover ul {
     display: flex;
-    list-style: none;
     -webkit-justify-content: space-around;
     justify-content: space-around;
   }
@@ -50,5 +49,19 @@
 
   .icon-menu-hide {
     display: none;
+  }
+
+  .main-content {
+    float: left;
+    width: 75%;
+  }
+
+  .sidebar {
+    float: right;
+    width: 20%;
+  }
+
+  .sidebar ul {
+    padding-left: 1em;
   }
 }
