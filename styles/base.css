@@ -1,10 +1,13 @@
-img {
-  max-width: 100%;
-}
-
 body {
+  margin: 1em auto;
+  width: 90%;
+  max-width: 900px;
   color: #eaecee;
   background-color: #34495e;
+}
+
+img {
+  max-width: 100%;
 }
 
 a, a:link, a:active {
@@ -17,4 +20,9 @@ a:hover, a:focus {
   -ms-transform: scale(1.1); /* For IE 9 */
   -webkit-transform: scale(1.1); /* Safari */
   transform: scale(1.1);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
 }

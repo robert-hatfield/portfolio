@@ -1,5 +1,4 @@
 # Portfolio assignment for class 3
-
 > Turned everything from the assignment README into tasks.
 
 Continue building and improving your portfolio site. Here's how you can leverage events:
