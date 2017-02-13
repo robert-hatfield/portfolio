@@ -6,6 +6,7 @@ var salmon = ['Salmon Cookies', 'A project completed while studying at Code Fell
 
 function Project(name, brief, description, deployment, repo, thumbnail) {
   this.name = name;
+  this.brief = brief;
   this.description = description;
   this.deployment = deployment;
   this.repo = repo;

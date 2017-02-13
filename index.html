@@ -8,6 +8,17 @@
     <link rel="stylesheet" href="/styles/base.css">
     <link rel="stylesheet" href="/styles/modules.css">
     <title>Robert Hatfield</title>
+    <script id="project-handlebars" type="text/x-handlebars-template">
+      <article>
+        <header>
+          <h2>{{projectName}}</h2>
+          <div class="brief-description">
+            {{brief}}
+          </div>
+        </header>
+        <section class="project-body">{{{body}}}</section>
+      </article>
+    </script>
   </head>
   <body>
     <div class="container">
@@ -53,6 +64,7 @@
         <li><a href="https://www.linkedin.com/in/robert-hatfield-963a17129/" target="_blank" class="icon-linkedin"> LinkedIn</a></li>
       </ul>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
     <script src="/scripts/app.js" charset="utf-8"></script>
   </body>
 </html>
