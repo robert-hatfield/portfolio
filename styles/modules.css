@@ -1,16 +1,18 @@
-.main-nav ul {
-  display: flex;
-  list-style: none;
-  -webkit-justify-content: space-around;
-  justify-content: space-around;
-}
+@media only screen and (min-width:1025px){
+  .main-nav ul {
+    display: flex;
+    list-style: none;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+  }
 
-.main-nav li {
-  display: flex;
-  -webkit-justify-content: space-around;
-  justify-content: space-around;
-}
+  .main-nav li {
+    display: flex;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+  }
 
-.center {
-  text-align: center;
+  .center {
+    text-align: center;
+  }
 }
