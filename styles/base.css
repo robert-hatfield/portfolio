@@ -1,3 +1,20 @@
 img {
   max-width: 100%;
 }
+
+body {
+  color: #eaecee;
+  background-color: #34495e;
+}
+
+a, a:link, a:active {
+  text-decoration: none;
+  color: #eeecea;
+}
+
+a:hover, a:focus {
+  color: #fff;
+  -ms-transform: scale(1.1); /* For IE 9 */
+  -webkit-transform: scale(1.1); /* Safari */
+  transform: scale(1.1);
+}
