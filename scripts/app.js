@@ -16,10 +16,12 @@ Project.prototype.toHtml = function () {
   $newProjectArticle.removeClass('template');
   // Fill template with data from the Project object
   $newProjectArticle.find('h1').html(this.name);
-  $newProjectArticle.find('p').html(this.brief);
-  $newProjectArticle.find('a').filter('.deployed-url').attr('href', this.deployment);
+  $newProjectArticle.find('p').filter('.project-brief').html(this.brief);
+  var $deployLink = $newProjectArticle.find('a').filter('.deployed-url');
+  $deployLink.attr('href', this.deployment).text(this.deployment);
   $newProjectArticle.find('img').attr('src', this.thumbnail);
-  $newProjectArticle.find('a').filter('.project-repo').attr('href', this.repo);
+  var $repoLink = $newProjectArticle.find('a').filter('.project-repo');
+  $repoLink.attr('href', this.repo).text(this.repo);
   $newProjectArticle.find('section').append(this.description + '<hr>');
   return $newProjectArticle;
 };

@@ -10,18 +10,6 @@ img {
   max-width: 100%;
 }
 
-a, a:link, a:active {
-  text-decoration: none;
-  color: #eeecea;
-}
-
-a:hover, a:focus {
-  color: #fff;
-  -ms-transform: scale(1.1); /* For IE 9 */
-  -webkit-transform: scale(1.1); /* Safari */
-  transform: scale(1.1);
-}
-
 ul {
   list-style: none;
   padding: 0;

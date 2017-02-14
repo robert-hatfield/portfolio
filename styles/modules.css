@@ -55,12 +55,12 @@
     display: none;
   }
 
-  .main-content {
+  .left-75 {
     float: left;
     width: 75%;
   }
 
-  .sidebar {
+  .right-25 {
     float: right;
     width: 20%;
   }
@@ -68,4 +68,20 @@
   .sidebar ul {
     padding-left: 1em;
   }
+}
+
+.any-nav a, .any-nav a:link, .any-nav a:active {
+  text-decoration: none;
+  color: #eeecea;
+}
+
+.any-nav a:hover, .any-nav a:focus {
+  color: #fff;
+  -ms-transform: scale(1.15); /* For IE 9 */
+  -webkit-transform: scale(1.15); /* Safari */
+  transform: scale(1.15);
+}
+
+.project-body a {
+  color: #FFE5DC;
 }
