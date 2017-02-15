@@ -1,14 +1,35 @@
 'use strict';
 
-// TODO: Build out this constructor function, create an array of my current projects. Initial project included as an example.
+var projects = [];
 
-var salmon = ['Salmon Cookies', 'A project completed while studying at Code Fellows', 'This was the project for week 2 of Code 201: Foundations of Software Development at Code Fellows. This site exercised skills blah blah blah...', 'https://robert-hatfield.github.io/cookie-stand/', 'https://github.com/robert-hatfield/cookie-stand', 'https://robert-hatfield.github.io/cookie-stand/assets/imgs/salmon.png'];
-
-function Project(name, brief, description, deployment, repo, thumbnail) {
-  this.name = name;
-  this.brief = brief;
-  this.description = description;
-  this.deployment = deployment;
-  this.repo = repo;
-  this.thumbnail = thumbnail
+function Project(input) {
+  this.name = input.name;
+  this.brief = input.brief;
+  this.description = input.description;
+  this.deployment = input.deployment;
+  this.repo = input.repo;
+  this.thumbnail = input.thumbnail
 }
+
+Project.prototype.toHtml = function () {
+  var $newProjectArticle = $('article.template').clone();
+  $newProjectArticle.removeClass('template');
+  // Fill template with data from the Project object
+  $newProjectArticle.find('h1').html(this.name);
+  $newProjectArticle.find('p').filter('.project-brief').html(this.brief);
+  var $deployLink = $newProjectArticle.find('a').filter('.deployed-url');
+  $deployLink.attr('href', this.deployment).text(this.deployment);
+  $newProjectArticle.find('img').attr('src', this.thumbnail);
+  var $repoLink = $newProjectArticle.find('a').filter('.project-repo');
+  $repoLink.attr('href', this.repo).text(this.repo);
+  $newProjectArticle.find('section').append(this.description + '<hr>');
+  return $newProjectArticle;
+};
+
+rawProjectData.forEach(function(rawObject) { // Pass all raw data object literals to constructor, and add the resulting object article to the projects array
+  projects.push(new Project(rawObject))
+});
+
+projects.forEach(function(htmlObject) {
+  $('#projects').append(htmlObject.toHtml());
+});
