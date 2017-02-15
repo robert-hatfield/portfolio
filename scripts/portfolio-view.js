@@ -1,7 +1,7 @@
 'use strict';
 
-var articleView = {};
-var currentTab = 1;
+let articleView = {};
+let currentTab = 1;
 
 articleView.handleMainNav = function () {
   $('.main-nav').on('click', '.tab', function(e) {
@@ -11,6 +11,5 @@ articleView.handleMainNav = function () {
   })
   $('.main-nav .tab:first').click();
 }
-
 
 articleView.handleMainNav();

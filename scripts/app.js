@@ -1,6 +1,6 @@
 'use strict';
 
-var projects = [];
+let projects = [];
 
 function Project(input) {
   this.name = input.name;
@@ -12,9 +12,8 @@ function Project(input) {
 }
 
 Project.prototype.toHtml = function () {
-  var source = $('#project-handlebars').html();
-  console.log(source);
-  var templateCompiler = Handlebars.compile(source);
+  let source = $('#project-handlebars').html();
+  let templateCompiler = Handlebars.compile(source);
   return templateCompiler(this);
 };
 
