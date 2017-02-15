@@ -1,7 +1,5 @@
 'use strict';
 
-let projects = [];
-
 function Project(input) {
   this.name = input.name;
   this.brief = input.brief;
@@ -26,15 +24,13 @@ Project.loadAll = function (rawObject) {
 Project.fetchAll = function() {
   if (localStorage.rawProjectData) {
     Project.loadAll(JSON.parse(localStorage.rawProjectData)) // load from localStorage if present
+    portfolioView.initPage();
   } else {
-    $.getJSON('/data/portfolo.json')
-    .then(function(data) { // use .then method to wait until .getJSON completes before running this function
+    $.getJSON('/data/portfolio.json')
+      .then(function(data) { // use .then method to wait until .getJSON completes before running this function
       Project.loadAll(data);
       localStorage.rawProjectData = JSON.stringify(data); // cache to local storage once loaded
+      portfolioView.initPage();
     })
   }
 }
-
-projects.forEach(function(htmlObject) {
-  $('#projects').append(htmlObject.toHtml());
-});

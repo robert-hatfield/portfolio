@@ -1,9 +1,9 @@
 'use strict';
 
-let articleView = {};
+let portfolioView = {};
 let currentTab = 1;
 
-articleView.handleMainNav = function () {
+portfolioView.handleMainNav = function () {
   $('.main-nav').on('click', '.tab', function(e) {
     e.preventDefault();
     $('section').filter('.main-content').hide();
@@ -12,4 +12,9 @@ articleView.handleMainNav = function () {
   $('.main-nav .tab:first').click();
 }
 
-articleView.handleMainNav();
+portfolioView.initPage = function() {
+  Project.all.forEach(function(htmlObject) {
+    $('#projects').append(htmlObject.toHtml());
+  });
+  portfolioView.handleMainNav();
+}
