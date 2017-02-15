@@ -13,11 +13,17 @@
       <article>
         <header>
           <h2>{{projectName}}</h2>
-          <div class="brief-description">
-            {{brief}}
+          <div class="byline">
+            <p class="project-brief">{{brief}}</p>
           </div>
         </header>
-        <section class="project-body">{{{body}}}</section>
+        <section class="project-body">
+          <p>Deployed at <a href="{{deployment}}"  target="_blank">{{deployment}}</a></p>
+          <p>Project repository: <a href="{{repo}}" >{{repo}}</a></p>
+          <img src="{{thumbnail}}" alt="Project thumbnail image" class="thumbnail"/>
+          {{description}}
+        </section>
+        <hr />
       </article>
     </script>
   </head>
