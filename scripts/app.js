@@ -11,15 +11,29 @@ function Project(input) {
   this.thumbnail = input.thumbnail
 }
 
+Project.all = [];
+
 Project.prototype.toHtml = function () {
   let source = $('#project-handlebars').html();
   let templateCompiler = Handlebars.compile(source);
   return templateCompiler(this);
 };
 
-rawProjectData.forEach(function(rawObject) { // Pass all raw data object literals to constructor, and add the resulting object article to the projects array
-  projects.push(new Project(rawObject))
-});
+Project.loadAll = function (rawObject) {
+  Project.all.push(new Project(rawObject));
+}
+
+Project.fetchAll = function() {
+  if (localStorage.rawProjectData) {
+    Project.loadAll(JSON.parse(localStorage.rawProjectData)) // load from localStorage if present
+  } else {
+    $.getJSON('/data/portfolo.json')
+    .then(function(data) { // use .then method to wait until .getJSON completes before running this function
+      Project.loadAll(data);
+      localStorage.rawProjectData = JSON.stringify(data); // cache to local storage once loaded
+    })
+  }
+}
 
 projects.forEach(function(htmlObject) {
   $('#projects').append(htmlObject.toHtml());
