@@ -1,16 +1,6 @@
 'use strict';
 
-// function Project(name, brief, description, deployment, repo, thumbnail) {
-//   this.name = name;
-//   this.brief = brief;
-//   this.description = description;
-//   this.deployment = deployment;
-//   this.repo = repo;
-//   this.thumbnail = thumbnail
-// }
-
-
-var rawProjectData = [
+const rawProjectData = [
   {
     name: 'About Me',
     brief: 'A project completed while studying at Code Fellows',

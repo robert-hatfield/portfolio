@@ -9,6 +9,23 @@
     <link rel="stylesheet" href="/styles/layout.css">
     <link rel="stylesheet" href="/styles/modules.css">
     <title>Robert Hatfield</title>
+    <script id="project-handlebars" type="text/x-handlebars-template">
+      <article>
+        <header>
+          <h2>{{name}}</h2>
+          <div class="byline">
+            <p class="project-brief">{{brief}}</p>
+          </div>
+        </header>
+        <section class="project-body">
+          <p>Deployed at <a href="{{deployment}}"  target="_blank">{{deployment}}</a></p>
+          <p>Project repository: <a href="{{repo}}" >{{repo}}</a></p>
+          <img src="{{thumbnail}}" alt="Project thumbnail image" class="thumbnail"/>
+          {{description}}
+        </section>
+        <hr />
+      </article>
+    </script>
   </head>
   <body>
     <div>
@@ -23,7 +40,6 @@
         <p>This is a brief sentence that describes me.</p>
       </section>
     </div>
-
     <nav class="main-nav any-nav">
       <h1 class="icon-menu-show"></h1>
       <h1 class="icon-menu-hide"></h1>
@@ -34,7 +50,6 @@
         <li class="tab" data-content="contact" data-tabIndex="4"><a href="#" class="icon-contact"> Contact</a></li>
       </ul>
     </nav>
-
     <main class="clear-floats">
       <hr />
       <section class="main-content" id="about">
@@ -74,8 +89,6 @@
       <section class="main-content" id="contact">
         Coming soon...
       </section>
-
-
     </main>
     <footer class="any-nav clear-floats">
       <ul>
@@ -85,7 +98,8 @@
         <li><a href="https://www.linkedin.com/in/robert-hatfield-963a17129/" target="_blank" class="icon-linkedin"> LinkedIn</a></li>
       </ul>
     </footer>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js" charset="utf-8"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" charset="utf-8"></script>
     <script src="/scripts/portfolio-data.js" charset="utf-8"></script>
     <script src="/scripts/app.js" charset="utf-8"></script>
     <script src="/scripts/portfolio-view.js" charset="utf-8"></script>
