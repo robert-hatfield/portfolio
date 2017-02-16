@@ -1,0 +1,26 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio project for Code 301",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robert-hatfield/portfolio.git"
+  },
+  "keywords": [
+    "portfolio",
+    "code-301"
+  ],
+  "author": "Robert Hatfield",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/robert-hatfield/portfolio/issues"
+  },
+  "homepage": "https://github.com/robert-hatfield/portfolio#readme",
+  "dependencies": {
+    "express": "^4.14.1"
+  }
+}

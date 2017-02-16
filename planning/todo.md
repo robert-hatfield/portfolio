@@ -118,9 +118,13 @@
   ### User Stories: Stretch Goals
     - [x] As a reader, I only want to have to fetch data when it's updated (and keep it cached locally), so that I don't make unneeded AJAX calls.
 
-  ## Technical Requirements and Grading Rubric
+  ## Technical Requirements and Grading Rubric  
     - [x] Transfer your collection of data over to a .json file, replacing your original file.
     - [x] [JSON-Lint](http://jsonlint.com/) to the rescue!
     - [x] Continue to follow good SMACSS principles.
     - [x] Be sure to use the correct jQuery method for each AJAX call.
     - [x] Be thoughtful when functions are executed asynchronously. This is a major source of bugs!
+
+# Class 7 - Node.js & NPM
+  ## Technical Requirements
+   - [x] Set up this project to run from a `server.js` file, just as we did in the [lab assignment](https://github.com/codefellows-seattle-301d17/07-node-npm) for class 7.
