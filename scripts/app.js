@@ -17,15 +17,19 @@ Project.prototype.toHtml = function () {
   return templateCompiler(this);
 };
 
-Project.loadAll = function (rawObject) {
-  Project.all.push(new Project(rawObject));
+Project.loadAll = function (rawProjectArray) {
+  rawProjectArray.forEach(function(rawProjectObject) {
+    Project.all.push(new Project(rawProjectObject));
+  })
 }
 
 Project.fetchAll = function() {
   if (localStorage.rawProjectData) {
+    console.log('Fetching from localStorage...');
     Project.loadAll(JSON.parse(localStorage.rawProjectData)) // load from localStorage if present
     portfolioView.initPage();
   } else {
+    console.log('No projects in localStorage; fetching from JSON data...');
     $.getJSON('/data/portfolio.json')
       .then(function(data) { // use .then method to wait until .getJSON completes before running this function
       Project.loadAll(data);
