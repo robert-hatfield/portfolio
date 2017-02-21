@@ -18,7 +18,17 @@
 
   Project.all = []; // set an array to which to store constructed projects
   // Load all fetched JSON object literals to create an array of all portfolio projects
-  Project.loadAll = rawProjectArray => {Project.all = rawProjectArray.map(rawProjectObject => new Project(rawProjectObject))};
+  Project.loadAll = rawProjectArray => {
+    Project.all = rawProjectArray.map(rawProjectObject => new Project(rawProjectObject));
+    Project.wordCount();
+  };
+
+  // IDEA: I'd like something more meaningful in the future. Maybe some statistics pulled from the GitHub API?
+  Project.wordCount = () => {
+    Project.words = Project.all.map(project => project.description.split(' '))
+    .map(words => words.length)
+    .reduce((a,b) => a + b);
+  };
 
   Project.fetchAll = function() { // Get project object literals from localStorage, or the JSON file
     if (localStorage.rawProjectData) {
@@ -35,5 +45,6 @@
       })
     }
   }
+
   module.Project = Project; // attach Project to the global scope so it (and its methods) are accessible outside this IFFE
 })(window);
