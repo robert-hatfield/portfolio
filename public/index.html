@@ -44,10 +44,10 @@
       <h1 class="icon-menu-show"></h1>
       <h1 class="icon-menu-hide"></h1>
       <ul>
-        <li class="tab" data-content="about" data-tabIndex="1"><a href="#" class="icon-home"> Home</a></li>
-        <li class="tab" data-content="projects" data-tabIndex="2"><a href="#" class="icon-briefcase"> Portfolio</a></li>
-        <li class="tab" data-content="blog" data-tabIndex="3"><a href="#" class="icon-blog"> Blog</a></li>
-        <li class="tab" data-content="contact" data-tabIndex="4"><a href="#" class="icon-contact"> Contact</a></li>
+        <li class="tab" data-content="about" data-tabIndex="1"><a href="/" class="icon-home"> Home</a></li>
+        <li class="tab" data-content="projects" data-tabIndex="2"><a href="/portfolio" class="icon-briefcase"> Portfolio</a></li>
+        <li class="tab" data-content="blog" data-tabIndex="3"><a href="/blog" class="icon-blog"> Blog</a></li>
+        <li class="tab" data-content="contact" data-tabIndex="4"><a href="/contact" class="icon-contact"> Contact</a></li>
       </ul>
     </nav>
     <main class="clear-floats">
@@ -98,10 +98,17 @@
         <li><a href="https://www.linkedin.com/in/robert-hatfield-963a17129/" target="_blank" class="icon-linkedin"> LinkedIn</a></li>
       </ul>
     </footer>
+    <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js" charset="utf-8"></script>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" charset="utf-8"></script>
     <script src="/scripts/models/projects.js" charset="utf-8"></script>
     <script src="/scripts/views/portfolio-view.js" charset="utf-8"></script>
+    <script src="/scripts/controllers/indexController.js" charset="utf-8"></script>
+    <script src="/scripts/controllers/portfolioController.js" charset="utf-8"></script>
+    <script src="/scripts/controllers/blogController.js" charset="utf-8"></script>
+    <script src="/scripts/controllers/contactController.js" charset="utf-8"></script>
+    <script src="/scripts/controllers/routes.js" charset="utf-8"></script>
+
     <script type="text/javascript">
       Project.fetchAll();
     </script>
