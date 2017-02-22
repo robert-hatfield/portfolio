@@ -2,7 +2,7 @@
 
 page('/', indexController.init);
 page('/portfolio', portfolioController.init);
-page('/blog', soonController.init);
-page('/contact', soonController.init);
+page('/blog', blogController.init);
+page('/contact', contactController.init);
 
 page();
