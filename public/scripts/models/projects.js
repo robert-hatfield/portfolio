@@ -55,6 +55,7 @@
         'Authorization': `token ${githubToken}`}
       })
       .then(data => Project.gitHub = data, err => console.error(err));
+      // TODO: Figure out how I'd like to filter data, and if there should be a callback here
       // .then(callback);
   };
 

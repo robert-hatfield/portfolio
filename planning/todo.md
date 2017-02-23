@@ -128,3 +128,11 @@
 # Class 7 - Node.js & NPM
   ## Technical Requirements
    - [x] Set up this project to run from a `server.js` file, just as we did in the [lab assignment](https://github.com/codefellows-seattle-301d17/07-node-npm) for class 7.
+
+# Class 12 - REST and APIs
+  ##Technical Requirements and Grading Rubric
+  - [ ] Ensure your code passes ESLint.
+  - [ ] Place all code within the proper layer of MVC abstraction and encapsulation.
+  - [ ] Use a proxied, authenticated ajax call to GitHub's API to get data from the API.
+  - [ ] Keep your portfolio responsive as it displays API data.
+  - [ ] DO NOT publish your GitHub Token to any public repo.
