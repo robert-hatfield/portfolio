@@ -54,8 +54,11 @@
       headers: {
         'Authorization': `token ${githubToken}`}
       })
-      .then(data => Project.gitHub = data, err => console.error(err));
-      // TODO: Figure out how I'd like to filter data, and if there should be a callback here
+      .then(data => Project.gitHub = data, err => console.error(err))
+      .then(Project.filteredRepos = Project.gitHub.filter(gitRepo => Project.all.map(project => project.repo).includes(gitRepo.html_url)));
+
+      // TODO: Data is getting filtered, but I'm not getting back an object for the Seattle Underground project. I need to modify my query.
+      // TODO: What, if any, should be the callback here?
       // .then(callback);
   };
 
