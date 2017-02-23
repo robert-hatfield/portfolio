@@ -46,5 +46,18 @@
     }
   }
 
+  Project.gitHub = [];
+  Project.requestRepos = function() {
+    $.ajax({
+      url: 'https://api.github.com/user/repos',
+      method: 'GET',
+      headers: {
+        'Authorization': `token ${githubToken}`}
+      })
+      .then(data => Project.gitHub = data, err => console.error(err));
+      // .then(callback);
+  };
+
+
   module.Project = Project; // attach Project to the global scope so it (and its methods) are accessible outside this IFFE
 })(window);
