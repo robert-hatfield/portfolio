@@ -47,15 +47,24 @@
   }
 
   Project.gitHub = [];
-  Project.requestRepos = function() {
+  Project.gitHubOrg = [];
+  Project.requestMyRepos = function() {
     $.get('/github/user/repos')
       .then(data => Project.gitHub = data, err => console.error(err))
-      .then(Project.filteredRepos = Project.gitHub.filter(gitRepo => Project.all.map(project => project.repo).includes(gitRepo.html_url)));
+      .then(Project.filteredRepos = Project.gitHub.filter(gitRepo => Project.all.map(project => project.repo).includes(gitRepo.html_url)))
+      .then(Project.requestOrgRepos());
 
       // TODO: Data is getting filtered, but I'm not getting back an object for the Seattle Underground project. I need to modify my query.
+      // $.get('github/orgs/theundergroundseattle/repos')
       // TODO: What, if any, should be the callback here?
       // .then(callback);
   };
+
+  Project.requestOrgRepos = function() {
+    $.get('/github/orgs/theundergroundseattle/repos')
+    .then(data => Project.gitHubOrg = data, err => console.error(err));
+  };
+
 
   module.Project = Project; // attach Project to the global scope so it (and its methods) are accessible outside this IFFE
 })(window);
