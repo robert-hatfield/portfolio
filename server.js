@@ -9,10 +9,10 @@ const PORT = process.env.PORT || 9001; // it's over 9000!!!
 app.use(express.static('./public'));
 
 app.get('/index.html', function (request, response) {
-  response.sendFile('public/index.html', {root: '.'});
+  response.sendFile('public/index.html', {root: './public'});
 })
 app.get('*', function (request, response) {
-  response.sendFile('public/index.html', {root: '.'});
+  response.sendFile('public/index.html', {root: './public'});
 })
 app.listen(PORT, function() {
   console.log('Listening on localhost:', PORT);
