@@ -48,12 +48,7 @@
 
   Project.gitHub = [];
   Project.requestRepos = function() {
-    $.ajax({
-      url: 'https://api.github.com/user/repos',
-      method: 'GET',
-      headers: {
-        'Authorization': `token ${githubToken}`}
-      })
+    $.get('/github/user/repos')
       .then(data => Project.gitHub = data, err => console.error(err))
       .then(Project.filteredRepos = Project.gitHub.filter(gitRepo => Project.all.map(project => project.repo).includes(gitRepo.html_url)));
 
@@ -61,7 +56,6 @@
       // TODO: What, if any, should be the callback here?
       // .then(callback);
   };
-
 
   module.Project = Project; // attach Project to the global scope so it (and its methods) are accessible outside this IFFE
 })(window);
