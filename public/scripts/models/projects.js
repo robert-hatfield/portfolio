@@ -23,7 +23,6 @@
     Project.wordCount();
   };
 
-  // IDEA: I'd like something more meaningful in the future. Maybe some statistics pulled from the GitHub API?
   Project.wordCount = () => {
     Project.words = Project.all.map(project => project.description.split(' '))
     .map(words => words.length)
@@ -46,25 +45,37 @@
     }
   }
 
-  Project.gitHub = [];
-  Project.gitHubOrg = [];
-  Project.requestMyRepos = function() {
-    $.get('/github/user/repos')
-      .then(data => Project.gitHub = data, err => console.error(err))
-      .then(Project.filteredRepos = Project.gitHub.filter(gitRepo => Project.all.map(project => project.repo).includes(gitRepo.html_url)))
-      .then(Project.requestOrgRepos());
+  Project.featuredRepos = [];
 
-      // TODO: Data is getting filtered, but I'm not getting back an object for the Seattle Underground project. I need to modify my query.
-      // $.get('github/orgs/theundergroundseattle/repos')
-      // TODO: What, if any, should be the callback here?
-      // .then(callback);
+  // Using .when & .done to wait for both AJAX requests to complete.
+  Project.requestRepos = function(callback) {
+    $.when($.get('/github/user/repos'), $.get('github/orgs/theundergroundseattle/repos'))
+      .done(function(userRequest, orgRequest) {
+        let userRepos = userRequest[0];
+        let orgRepos = orgRequest[0];
+        Project.allRepos = concatRepos(userRepos, orgRepos);
+        Project.featuredRepos = filterRepos(Project.allRepos);
+      })
   };
 
   Project.requestOrgRepos = function() {
     $.get('/github/orgs/theundergroundseattle/repos')
-    .then(data => Project.gitHubOrg = data, err => console.error(err));
+    .then(data => Project.orgRepos = data, err => console.error(err));
   };
 
+  function concatRepos(repo1, repo2) {
+    console.log('Inside the concat');
+    console.log(repo1);
+    console.log(repo2);
+    let allRepos = repo1.concat(repo2);
+    console.log(allRepos);
+    return allRepos;
+  };
+
+  function filterRepos(repos) {
+    let results = repos.filter(gitRepo => Project.all.map(project => project.repo).includes(gitRepo.html_url));
+    return results;
+  };
 
   module.Project = Project; // attach Project to the global scope so it (and its methods) are accessible outside this IFFE
 })(window);

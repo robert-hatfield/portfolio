@@ -5,7 +5,7 @@
   portfolioController.init = () => {
     $('main > section').hide();
     $('#projects').show();
-    Project.requestMyRepos();
+    Project.requestRepos();
   }
   module.portfolioController = portfolioController;
 })(window);
